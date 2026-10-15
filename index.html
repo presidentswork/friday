@@ -336,6 +336,7 @@ section,footer{position:relative;z-index:2}
 .logo-open{position:sticky;top:calc(50lvh - 16.875rem);clip-path:inset(50%);--pop:0;--grow:0;--flying:0;--shift:0px;--mx:0px;--my:0px;--msize:4.75rem}
 .logo-open-wrap[data-reduced="true"] .logo-open{clip-path:none;--grow:1}
 #statement{position:relative;overflow:clip;border-radius:2rem;background:#c8f752;height:34.5rem;--dot:rgba(10,11,9,.175);--ink-muted:rgba(10,11,9,.55);--ink-cap:rgba(10,11,9,.5)}
+.st-ruler{display:contents}
 .st-dots{position:absolute;inset:0;background-image:radial-gradient(circle,var(--dot) 1.5px,transparent 2px);background-size:3rem 3rem;background-position:1.59375rem 1.59375rem}
 .st-canvas{position:absolute;inset:0;pointer-events:none}
 .st-kicker{position:absolute;top:4rem;left:5rem;right:5rem;display:flex;justify-content:center;color:var(--ink-muted);font-family:var(--font-fragment-mono);font-size:var(--type-label);line-height:var(--line-label)}
@@ -570,6 +571,16 @@ section,footer{position:relative;z-index:2}
 @media (width<=900px){.ft-top{grid-template-columns:minmax(0,1fr)}.ft-brand .tag{max-width:18.25rem}.ft-cta h2{font-size:1.625rem;line-height:2.125rem}.ft-cta h2 em{font-size:1.625rem;line-height:2.125rem}.ft-status{gap:2rem}.ft-cols{grid-template-columns:1fr 1fr;gap:1.5rem}.ft-google{flex-direction:column;align-items:flex-start}}
 @media (width<=580px){#footer{padding-top:3rem}.ft-brand{height:auto;padding:1.1875rem}.ft-brand .tag{margin-top:3.5rem}.ft-glyph{display:none}.ft-cta{padding:1.25rem}.ft-cta h2{font-size:2rem;line-height:2.625rem}.ft-cta h2 em{font-size:2rem;line-height:2.625rem}.ft-status{flex-direction:column;gap:1rem}.ft-cols{grid-template-columns:1fr 1fr;gap:1.5rem}.ft-co{grid-column:span 2}.ft-legal{flex-direction:column;gap:.5rem}.ft-social a{border-radius:.25rem}}
 @media (width<=580px){.title,.hero-h1,.st-title,h1,h2,h3,h4{overflow-wrap:anywhere;letter-spacing:-.0625rem}.hero-h1{letter-spacing:-.0625rem}.sec-head,.sec-head .stack,.sec-head .aside{max-width:100%;min-width:0}.hero-chip [data-type]{white-space:normal;clip-path:none!important}.hero-chip{height:auto;min-height:2rem;padding-block:.375rem}[data-type]{max-width:100%}.map{margin-top:.5rem}.pin:nth-child(2){left:8%!important;top:62%!important}.pin:nth-child(3){left:48%!important;top:30%!important}.pin:nth-child(4){left:84%!important;top:88%!important}.msgc{height:auto}.trace,.supc{height:16rem}.msgc .btn,.msgc .wait{white-space:nowrap}.msgc .btns{flex-wrap:wrap;gap:.5rem}}
+@media (width<=580px){
+ .logo-open-wrap{height:auto!important;padding-bottom:8rem}.logo-open{top:3.5rem}
+ #statement{height:auto;padding:1.5rem 1.25rem 1.75rem;display:flex;flex-direction:column;align-items:center}
+ .st-kicker,.st-title,.st-who,.st-mark,.st-stem{position:relative;top:auto;left:auto;right:auto;width:auto;transform:none}
+ .st-kicker{margin-bottom:1rem}.st-title{margin-bottom:.875rem;line-height:2.125rem}.st-title em{font-size:1.625rem}.st-who{margin-bottom:1.5rem;font-size:.75rem;line-height:1rem}
+ .st-mark{width:4.25rem;height:4.25rem}.st-stem{display:block;height:2.75rem;margin:0 0 .5rem}
+ .st-ruler{display:block;position:relative;width:100%;height:6.25rem;margin-top:.5rem}
+ .st-cap{top:0;left:0;width:auto;white-space:nowrap}.st-ticks{top:3rem;left:0;width:100%}.st-now{top:1.9rem;left:calc(50% - 1.875rem)}.st-nowdot{top:3.55rem;left:calc(50% - .3125rem)}.st-hours{top:4.75rem;left:0;right:0}
+ .hero-window,.hero-ring{top:34.5rem!important}.w-trigger{top:43.6rem!important}#hero{--hero-frame:58.5rem}
+}
 @media (prefers-reduced-motion:reduce){.w-run{opacity:1!important}[data-rise],[data-fade],[data-focus],[data-draw],[data-type],.st-title span,.st-title em,.st-kicker,.st-who,.st-mark,.st-cap,.st-now,.st-hours li,.w-chrome,.w-node,.w-chip,.w-lbl,.w-port,.w-running,.w-runs-rule,.w-runs-lbl,.logo-tile-b,.nav,.heat .hcol i,.heat .hcol .day,.faces i,.pin,.map ellipse,.sec-card li span,.ft-status span,.ft-form .lbl,.pf-blooms,.ft-cta h2 span{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;mask-image:none!important;-webkit-mask-image:none!important}.st-stem,.st-nowdot,.trace .bar,.supc .bar,.msgc .accent,.ft-status i,.pf-col .tick,.heat .hcol .today{transform:none!important;opacity:1!important}.ring .arc,.curves path,.trace .ic path,.sec-card li svg path,.w-conn path{stroke-dashoffset:0!important;opacity:1!important}.logos-rail{clip-path:none!important}.logos-packet{opacity:1!important}}
 </style>
 </head>
@@ -771,11 +782,11 @@ section,footer{position:relative;z-index:2}
         <p class="st-who" id="stWho"><b>Sruly Fisch</b>Founder &amp; CEO of Piping Pros</p>
         <div class="st-mark" id="stMark" data-statement-mark><div class="in"><svg class="mark-glyph" style="color:#c8f751"><use href="#i-f"/></svg></div></div>
         <i class="st-stem" id="stStem"></i>
-        <p class="st-cap" id="stCap" data-type-manual>one tick, one payroll run</p>
+        <div class="st-ruler"><p class="st-cap" id="stCap" data-type-manual>one tick, one payroll run</p>
         <svg class="st-ticks" id="stTicks"></svg>
         <p class="st-now" id="stNow">now</p>
         <div class="st-nowdot" id="stNowDot"><i class="d"></i><i class="f"></i></div>
-        <ul class="st-hours" id="stHours"><li>09:00</li><li>11:00</li><li>13:00</li><li>15:00</li><li>17:00</li><li>19:00</li></ul>
+        <ul class="st-hours" id="stHours"><li>09:00</li><li>11:00</li><li>13:00</li><li>15:00</li><li>17:00</li><li>19:00</li></ul></div>
       </section>
       <span class="logo-open-mark" id="logoOpenMark"><svg class="mark-glyph" style="color:#c8f751"><use href="#i-f"/></svg></span>
     </div>
